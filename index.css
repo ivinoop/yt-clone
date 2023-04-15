@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sidebar-items {
+    @apply py-3 border-b-[1px] border-gray-400 flex flex-col space-y-2;
+  }
+  .sidebar-item {
+    @apply cursor-pointer p-1 hover:bg-slate-300 hover:rounded-lg flex items-center;
+  }
+  .sidebar-icon {
+    @apply mr-2 w-6 h-6;
+  }
+  .nav-right-icon {
+    @apply w-6 h-6 cursor-pointer;
+  }
+  .search-suggestions-item {
+    @apply hover:bg-slate-300 hover:rounded-md px-4 py-1;
+  }
+}

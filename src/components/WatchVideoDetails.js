@@ -51,7 +51,7 @@ const WatchVideoDetails = ({ info }) => {
           </div>
         </div>
       </div>
-      <div className='bg-gray-200 p-3 rounded-lg text-sm line-clamp-5'>
+      <div className='bg-gray-200 p-3 rounded-lg text-sm'>
         {snippet.description}
       </div>
       <div className='flex items-center mb-2 mt-8'>

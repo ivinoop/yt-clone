@@ -3,9 +3,12 @@ import { useDispatch } from 'react-redux'
 import { closeMenu } from '../utils/appSlice'
 import { useSearchParams } from 'react-router-dom'
 import { RelatedVideosContainer } from './VideoContainer'
-import { WatchVideoCardDetails } from './VideoCard'
+import WatchVideoDetails from './WatchVideoDetails'
+import useVideos from '../utils/useVideos'
+import CommentsContainer from './CommentsContainer'
 
 const WatchVideo = () => {
+  const videos = useVideos()
   const dispatch = useDispatch()
 
   const [searchParams] = useSearchParams()
@@ -28,6 +31,12 @@ const WatchVideo = () => {
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
             allowFullScreen
           ></iframe>
+          {videos.map((video) => {
+            if (video.id === searchParams.get('v')) {
+              return <WatchVideoDetails key={video.id} info={video} />
+            }
+          })}
+          <CommentsContainer />
         </div>
         <div>
           <RelatedVideosContainer />

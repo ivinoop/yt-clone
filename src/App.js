@@ -7,7 +7,7 @@ import store from './utils/store'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainContainer from './components/MainContainer'
 import WatchVideo from './components/WatchVideo'
-import UseMemoDemo from './components/UseMemoDemo'
+import UseMemoDemo from './components/useMemoDemo'
 import UseRefDemo from './components/UseRefDemo'
 
 const appRouter = createBrowserRouter([
